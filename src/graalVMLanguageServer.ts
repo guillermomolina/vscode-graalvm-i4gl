@@ -65,7 +65,7 @@ export function startLanguageServer(graalVMHome: string) {
 	}
 }
 
-export function connectToLanguageServer(connection: (() => Thenable<StreamInfo>)) {
+export function connectToLanguageServer(connection: (() => Promise<StreamInfo>)) {
 	const clientOptions: LanguageClientOptions = {
 		documentSelector: [
 			{ scheme: 'file', language: 'i4gl' },

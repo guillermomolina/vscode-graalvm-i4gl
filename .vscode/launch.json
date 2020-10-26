@@ -35,11 +35,13 @@
 			"cwd": "${workspaceFolder}",
 			"program": "${workspaceFolder}/src/graalVMDebug.ts",
 			"args": [
-				"--server=4711"
+				"--server=4711",
+				"--trace-warnings"
 			],
 			"outFiles": [
 				"${workspaceFolder}/out/**/*.js"
-			]
+			],
+			"preLaunchTask": "npm: watch"
 		},
 		{
 			"name": "Tests",

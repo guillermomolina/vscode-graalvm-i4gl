@@ -5,12 +5,12 @@
  * Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
  */
 
-import * as vscode from 'vscode';
 import * as cp from 'child_process';
 import * as fs from 'fs';
 import * as net from 'net';
 import * as path from 'path';
 import { pathToFileURL } from 'url';
+import * as vscode from 'vscode';
 import * as utils from './utils';
 import { LSPORT, connectToLanguageServer, stopLanguageServer, lspArgs, hasLSClient, setLSPID } from './graalVMLanguageServer';
 import { StreamInfo } from 'vscode-languageclient';

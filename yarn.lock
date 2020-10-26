@@ -4015,7 +4015,7 @@ vscode-debugadapter-testsupport@^1.42.0:
   dependencies:
     vscode-debugprotocol "^1.42.0"
 
-vscode-debugadapter@^1.37.1, vscode-debugadapter@^1.42.1:
+vscode-debugadapter@^1.37.1:
   version "1.42.1"
   resolved "https://registry.yarnpkg.com/vscode-debugadapter/-/vscode-debugadapter-1.42.1.tgz#8fe1daa23548dbe4034a065c362d16a4bab18dc2"
   integrity sha512-bICDB8mxReU2kGL13ftjNqeInYtVN3zpRdZKjRZHCpXC/mofrdaj9KRlJsALwcUNivMA9S/LwTZ2n+ros3X0jg==

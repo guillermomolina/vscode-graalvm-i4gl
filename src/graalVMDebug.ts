@@ -132,7 +132,7 @@ export class GraalVMConfigurationProvider implements vscode.DebugConfigurationPr
         return getLaunchInfo(config, vscode.workspace.getConfiguration('graalvm').get('home') as string).then(launchInfo => {
 			config.graalVMLaunchInfo = launchInfo;
 			if (config.program) {
-				if (!vscode.workspace.getConfiguration('graalvm').get('languageServer.inProcessServer') as boolean) {
+				if (!vscode.workspace.getConfiguration('graalvm').get('languageServer.inProcessServer')) {
 					vscode.commands.getCommands().then((commands: string[]) => {
 						if (commands.includes('dry_run')) {
 							vscode.commands.executeCommand('dry_run', pathToFileURL(config.program));
@@ -278,7 +278,7 @@ async function getLaunchInfo(config: vscode.DebugConfiguration | ILaunchRequestA
 	}
 	const runtimeArgs = config.runtimeArgs || [];
 	const programArgs = config.args || [];
-	let launchArgs = [];
+	let launchArgs : string[] = [];
 	if (!config.noDebug) {
 		if (!config.protocol || config.protocol === 'debugAdapter') {
 			launchArgs.push(`--dap=${port}`);

@@ -13,7 +13,7 @@ import { LanguageClient, LanguageClientOptions, StreamInfo } from 'vscode-langua
 
 export const LSPORT: number = 8123;
 const POLYGLOT: string = 'polyglot';
-const delegateLanguageServers: Set<() => Thenable<String>> = new Set();
+const delegateLanguageServers: Set<() => Thenable<string>> = new Set();
 
 let languageClient: Promise<LanguageClient> | undefined;
 let languageServerPID: number = 0;
@@ -68,11 +68,8 @@ export function startLanguageServer(graalVMHome: string) {
 export function connectToLanguageServer(connection: (() => Thenable<StreamInfo>)) {
 	const clientOptions: LanguageClientOptions = {
 		documentSelector: [
-			{ scheme: 'file', language: 'javascript' },
-			{ scheme: 'file', language: 'sl' },
-			{ scheme: 'file', language: 'python' },
-			{ scheme: 'file', language: 'r' },
-			{ scheme: 'file', language: 'ruby' }
+			{ scheme: 'file', language: 'i4gl' },
+			{ scheme: 'file', language: 'sl' }
 		]
 	};
 

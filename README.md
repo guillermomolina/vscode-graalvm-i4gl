@@ -3,6 +3,7 @@
 A VS Code extension providing the basic support for editing and debugging I4GL programs running on [GraalVM I4GL](http://www.graalvm.org/docs/reference-manual/languages/i4gl).
 The extension is Technology Preview.
 
+Syntax higlight based on the extension [I4GL](https://marketplace.visualstudio.com/items?itemName=CristianRengifo.informix4gl), the source code is hosted at [github](https://github.com/INGCRENGIFO/VsCodeInformix4GL.git).
 ## Features
 
 ### I4GL Debugging
@@ -34,6 +35,12 @@ Since an easy writing of [polyglot](https://www.graalvm.org/docs/reference-manua
 For I4GL sources opened in editor, all the `Polyglot.eval(...)` calls are detected and the respective embedded languages are injected to their locations. For example, having a JavaScript code snippet called via the Polyglot API from inside a I4GL source, the JavaScript language code is embedded inside the corresponding I4GL string and all VS Code's editing features (syntax highlighting, bracket matching, auto closing pairs, code completion, etc.) treat the content of the string as the JavaScript source code.
 
 ![Image Language Embedding](images/language-embedding-i4gl.png)
+
+## Extension Settings
+
+This extension contributes the following settings:
+
+* __graalvm.i4gl.home__ - Path to GraalVM I4GL installation.
 
 ## Requirements
 

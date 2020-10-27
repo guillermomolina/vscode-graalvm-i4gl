@@ -76,6 +76,16 @@
 				"files.insertFinalNewline": true
 			}
 		},
+		"configuration": {
+			"type": "object",
+			"title": "GraalVM",
+			"properties": {
+				"graalvm.i4gl.home": {
+					"type": "string",
+					"description": "Path to the GraalVM i4gl installation"
+				}
+			}
+		},
 		"breakpoints": [
 			{
 				"language": "i4gl"
@@ -90,59 +100,25 @@
 				],
 				"configurationSnippets": [
 					{
-						"label": "GraalVM: Launch Polyglot Application",
-						"description": "Launch a Polyglot Application in debug mode",
+						"label": "GraalVM: Launch I4GL Script",
+						"description": "Launch an I4GL Script in debug mode",
 						"body": {
 							"type": "graalvm",
 							"request": "launch",
-							"name": "Launch Polyglot App",
-							"runtimeExecutable": "polyglot",
-							"program": "^\"${1:\\${file\\}}\""
-						}
-					},
-					{
-						"label": "GraalVM: Launch i4gl Script",
-						"description": "Launch an i4gl Script in debug mode",
-						"body": {
-							"type": "graalvm",
-							"request": "launch",
-							"name": "Launch i4gl Script",
+							"name": "Launch I4GL",
 							"runtimeExecutable": "i4gl",
 							"program": "^\"${1:\\${file\\}}\""
 						}
 					},
 					{
-						"label": "GraalVM: Launch i4gl Terminal",
-						"description": "Launch an i4gl terminal in debug mode",
+						"label": "GraalVM: Launch I4GL Terminal",
+						"description": "Launch an I4GL terminal in debug mode",
 						"body": {
 							"type": "graalvm",
 							"request": "launch",
-							"name": "Launch i4gl Term",
+							"name": "Launch I4GL Terminal",
 							"runtimeExecutable": "i4gl",
 							"console": "integratedTerminal"
-						}
-					},
-					{
-						"label": "GraalVM: Attach",
-						"description": "Attach to a running GraalVM",
-						"body": {
-							"type": "graalvm",
-							"request": "attach",
-							"name": "Attach",
-							"port": 9229
-						}
-					},
-					{
-						"label": "GraalVM: Attach to Remote",
-						"description": "Attach to the debug port of a remote GraalVM",
-						"body": {
-							"type": "graalvm",
-							"request": "attach",
-							"name": "Attach to Remote",
-							"address": "${1:TCP/IP address of process to be debugged}",
-							"port": 9229,
-							"localRoot": "${workspaceFolder}",
-							"remoteRoot": "${2:Absolute path to the remote directory containing the program}"
 						}
 					}
 				]

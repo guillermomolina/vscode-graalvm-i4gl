@@ -93,7 +93,7 @@
 		],
 		"debuggers": [
 			{
-				"type": "graalvm",
+				"type": "graalvm-i4gl",
 				"label": "GraalVM",
 				"languages": [
 					"i4gl"
@@ -101,7 +101,7 @@
 				"configurationSnippets": [
 					{
 						"label": "GraalVM: Launch I4GL Script",
-						"description": "Launch an I4GL Script in debug mode",
+						"description": "Launch an I4GL script in debug mode",
 						"body": {
 							"type": "graalvm",
 							"request": "launch",

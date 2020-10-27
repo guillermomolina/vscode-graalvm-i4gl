@@ -28,11 +28,11 @@ In order to start a debug session, first select the proper configuration using t
 
 ### Additional Editor Features
 
-Since an easy writing of [polyglot](https://www.graalvm.org/docs/reference-manual/polyglot) applications is one of the defining features of GraalVM, the code completion invoked inside I4GL sources provides items for `Polyglot.eval(...)`, `Polyglot.eval_file(...)` and `Java.type(...)` calls.
+Since an easy writing of [polyglot](https://www.graalvm.org/docs/reference-manual/polyglot) applications is one of the defining features of GraalVM, the code completion invoked inside I4GL sources provides items for `polyglot_eval(...)`, `polyglot_eval_file(...)` and `java_type(...)` calls.
 
 ![Image Code Completion](images/code-completion-i4gl.png)
 
-For I4GL sources opened in editor, all the `Polyglot.eval(...)` calls are detected and the respective embedded languages are injected to their locations. For example, having a JavaScript code snippet called via the Polyglot API from inside a I4GL source, the JavaScript language code is embedded inside the corresponding I4GL string and all VS Code's editing features (syntax highlighting, bracket matching, auto closing pairs, code completion, etc.) treat the content of the string as the JavaScript source code.
+For I4GL sources opened in editor, all the `polyglot_eval(...)` calls are detected and the respective embedded languages are injected to their locations. For example, having a JavaScript code snippet called via the Polyglot API from inside a I4GL source, the JavaScript language code is embedded inside the corresponding I4GL string and all VS Code's editing features (syntax highlighting, bracket matching, auto closing pairs, code completion, etc.) treat the content of the string as the JavaScript source code.
 
 ![Image Language Embedding](images/language-embedding-i4gl.png)
 

@@ -6,3 +6,4 @@ npm-debug.log
 graalvm-debug.txt
 *.vsix
 .DS_Store
+package-lock.json

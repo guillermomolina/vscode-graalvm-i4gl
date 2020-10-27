@@ -57,7 +57,7 @@
 			{
 				"language": "i4gl",
 				"scopeName": "source.i4gl",
-				"path": "./syntaxes/4GL.tmLanguage.json"
+				"path": "./syntaxes/i4gl.tmLanguage.json"
 			}
 		],
 		"snippets": [
